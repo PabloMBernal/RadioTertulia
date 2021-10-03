@@ -1,13 +1,6 @@
 /*global*/
 
-@media (min-width: 768px){
-    .main{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-}
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -36,19 +29,38 @@ a{
 /*header*/
 
 header{
+    position: sticky;
+    top: 0;
+    margin-top: -182px;
+    display: flex;
+    overflow: hidden;
     background-color: #4d0000;
     border-bottom: 1px solid #fff;
 }
+.logo{
+    
+    order: 2;
+}
+
 header li{
-    float: right;
+    order: 1;
+    /*menu hamburguesa aca*/
     display: inline;
     padding: 0 20px;
+}
+.nav-button li a{
+    padding: 5px;
+    background-color: blue;
+    color:#fff;
+}
+.nav-button{
+    display: none;
 }
 
 /*main body*/
 
-
 .news{
+    text-align: center;
     margin-top: 20px;
     border-bottom: 1px solid #fff;
     padding: 3px;
@@ -57,13 +69,101 @@ header li{
 .news img{
     width: 340px;
     height: auto;
+
+}
+.main-box{
+    margin-top: 182px;
+    display: flex;
+    flex-direction: column;
 }
 
+.top-news{
+    text-align: center;
+}
+.top-news img{
+    width: 340px;
+    height: auto;
+}
+.sidebar1{
+    order: 3;
+}
+.sidebar2{
+    order: 2;
+}
 
+.sidebar2 h2{
+    background-color: #4d0000;
+    padding: 5px;
+}
+.main{
+    order: 1;
+}
+
+.ads img{
+    padding:20px 0px 20px 20px;
+    width: 220px;
+    height: auto;
+}
 /*footer*/
 
 footer{
     border-top: 2px #4d0000 solid;
     background-color: black;
     padding-bottom: 30px;
+}
+
+@media (min-width: 768px){
+    /*header area*/
+    header li{
+        flex-direction: initial;
+        display: inline;
+        padding: 0 20px;
+    }
+    .nav-button{
+        display: initial;
+    }
+    /*body area*/
+    .main-box{
+        display: flex;
+    }
+    .top-news{
+        justify-content: center;
+        overflow: hidden;
+    }
+        
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        
+        flex: 7;
+        order: 2;
+        justify-content: space-between;
+    }   
+
+    .sidebar1{
+        flex:1;
+        margin-right: 20px;
+        order: 1;
+    }
+    .sidebar2{
+        flex:1;
+        margin-left: 20px;
+        order: 3;
+    }
+
+    
+    .main-box{
+        display: flex;
+        flex-direction: row;
+    }
+    .top-news{
+        margin-top: 20px;
+        border-bottom: 1px solid #fff;
+        flex-basis: fit-content;
+    }
+    .top-news img{
+        width: auto;
+        height: 400px;
+
+    }
 }
