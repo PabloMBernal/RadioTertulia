@@ -87,14 +87,33 @@ header li{
 .sidebar1{
     order: 3;
 }
+.adlist{
+    font-size: 9px;
+    text-align: center;
+}
 .sidebar2{
     order: 2;
 }
 
 .sidebar2 h2{
     background-color: #4d0000;
+    text-align: center;
     padding: 5px;
 }
+
+.sidebar2 a{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.sidebar2 a:hover{
+    color: #888;
+}
+
+.trending{
+    padding: 15px 0px;
+}
+
 .main{
     order: 1;
 }
