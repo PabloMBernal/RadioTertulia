@@ -72,8 +72,8 @@ header li{
     top: 0;
     right: 0;
     z-index: 2;
-    width: 40px;
-    height: 40px;
+    width: 82px;
+    height: 82px;
     opacity: 0;
 }
 
@@ -285,9 +285,13 @@ footer{
         background-color: #888;
         color:#fff;
     }
-    .toggler{
-        display: none;
+
+    .menu-wrap .menu >div{
+        width: 8vw;
+        height: 30vw;
+
     }
+
     .newsletter{
         display: flex;
         justify-content: right;
