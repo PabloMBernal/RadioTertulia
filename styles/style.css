@@ -164,8 +164,6 @@ header li{
 
 
 
-
-
 .newsletter{
     text-align: center;
     padding-bottom: 15px;
@@ -253,6 +251,18 @@ footer{
 
 @media (min-width: 768px){
     /*header area*/
+
+    header{
+        position: sticky;
+        top: 0;
+        margin-top: -182px;
+        display: flex;
+        overflow: hidden;
+        background-color: #4d0000;
+        padding-bottom: 120px ;
+        border-bottom: 1px solid #fff;
+    }
+
     .container{
         display: flex;
         flex-direction: column;
@@ -265,8 +275,12 @@ footer{
         flex-direction: row;
         overflow: hidden;
     }
+
     #logo{
         flex:4;
+        
+        position: fixed;
+        top: 0;
     }
 
     header li{
@@ -279,9 +293,9 @@ footer{
         margin-top: 30px;
         justify-content: right;
     }
+
     .nav-button a:hover{
         border: #888 solid 5px;
-        border-radius: 25%;
         background-color: #888;
         color:#fff;
     }
@@ -291,11 +305,39 @@ footer{
         height: 30vw;
 
     }
+    .menu-wrap{
+        visibility: hidden;
+    }
+
+
+    .menu-wrap menu{
+        position: fixed;
+        top: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+    }
+
+    .nav-button{
+        visibility:visible;
+        position: fixed;
+        top: 0;
+        flex-direction: row;
+        width: 100vw;
+        height: 20wv;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+
+
 
     .newsletter{
         display: flex;
         justify-content: right;
-        margin-left: 60px;
+        margin-top: 5px;
+        margin-left: 6px;
         padding-bottom: 15px;
     }
 
