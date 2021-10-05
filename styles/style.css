@@ -1,72 +1,60 @@
 /*global*/
 
-
-
 body{
+    background-color: #1a1a1a;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    background-color: #1a1a1a;
     color: #fff;
 }
-
 ul{
     margin: 0;
     padding: 0;
 }
-
-
-
 a{
     text-decoration: none;
 }
-
 
 /*header*/
 
 header{
     position: sticky;
-    top: 0;
-    margin-top: -182px;
     display: flex;
     overflow: hidden;
+    top: 0;
+    margin-top: -182px;
     background-color: #4d0000;
     border-bottom: 1px solid #fff;
 }
-
 .container{
     display: flex;
     flex-direction: column;
-    
 }
 #logo{
+    order: 2;
     text-align: center;
     font-family: Georgia, serif;
     font-weight: normal;
     font-style: oblique;
-    order: 2;
 }
-
 .menu-wrap{
     order: 1;
 }
-
 header li{
     display: inline;
     padding: 0 20px;
 }
 .nav-button li a{
-    font-size: 1.5em;
     border: #1a1a1a solid 5px;
     border-radius: 25%;
     background-color: #1a1a1a;
     color:#fff;
+    font-size: 1.5em;
 }
 .nav-button{
     display: flex;
     flex-wrap: wrap;
 }
-
 .menu-wrap .toggler{
     position: absolute;
     top: 0;
@@ -76,8 +64,10 @@ header li{
     height: 82px;
     opacity: 0;
 }
-
 .menu-wrap .hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     right: 0;
@@ -86,35 +76,29 @@ header li{
     height: 50px;
     padding: 1rem;
     background: #1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
 .menu-wrap .hamburger > div{
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
 }
-
 .menu-wrap .hamburger > div::before, .menu-wrap .hamburger > div::after{
-    content: '';
     position: absolute;
     z-index: 1;
     top: -10px;
     width: 100%;
     height: 2px;
+    content: '';
     background: inherit;
 }
 .menu-wrap .hamburger > div::after{
     top: 10px;
 }
-
 .menu-wrap .toggler:checked + .hamburger > div{
     transform: rotate(135deg);
 }
@@ -122,62 +106,47 @@ header li{
     top: 0;
     transform: rotate(90deg);
 }
-
 .menu-wrap .toggler:checked ~ .menu{
     visibility: visible;
-
 }
-
-
 .menu-wrap .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     right: 0;
     visibility: hidden;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
 .menu-wrap .menu >div{
-    background: #1a1a1a;
-    width: 30vw;
-    height: 100vw;
-    border: #fff dotted 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 30vw;
+    height: 100vw;
+    background: #1a1a1a;
+    border: #fff dotted 1px;
     
 }
-
-
 .menu-wrap .menu >div >div{
     text-align: center;
     transition: all 0.4s ease;
 }
-
-
-
-
-
-
-
 .newsletter{
-    text-align: center;
     padding-bottom: 15px;
+    text-align: center;
 }
-
 
 /*main body*/
 
 .news{
-    text-align: center;
     margin-top: 20px;
     border-bottom: 1px solid #fff;
     padding: 3px;
     flex-basis: 28%;
+    text-align: center;
 }
 .news img{
     width: 340px;
@@ -185,11 +154,10 @@ header li{
 
 }
 .main-box{
-    margin-top: 182px;
     display: flex;
     flex-direction: column;
+    margin-top: 182px;
 }
-
 .top-news{
     text-align: center;
 }
@@ -207,30 +175,24 @@ header li{
 .sidebar2{
     order: 2;
 }
-
 .sidebar2 h2{
+    padding: 5px;
     background-color: #4d0000;
     text-align: center;
-    padding: 5px;
 }
-
 .sidebar2 a{
     color: #fff;
     font-size: 1.5em;
 }
-
 .sidebar2 a:hover{
     color: #888;
 }
-
 .trending{
     padding: 15px 0px;
 }
-
 .main{
     order: 1;
 }
-
 .ads img{
     padding:20px 0px 20px 20px;
     width: 220px;
@@ -238,151 +200,12 @@ header li{
 }
 /*footer*/
 .wrapfooter{
+    overflow: hidden;
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
-
 footer{
     border-top: 2px #4d0000 solid;
-    background-color: black;
     padding-bottom: 30px;
-}
-
-@media (min-width: 768px){
-    /*header area*/
-
-    header{
-        position: sticky;
-        top: 0;
-        margin-top: -182px;
-        display: flex;
-        overflow: hidden;
-        background-color: #4d0000;
-        padding-bottom: 120px ;
-        border-bottom: 1px solid #fff;
-    }
-
-    .container{
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-    }
-    .upperheader{
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-    }
-
-    #logo{
-        flex:4;
-        
-        position: fixed;
-        top: 0;
-    }
-
-    header li{
-        flex-direction: initial;
-        display: inline;
-        padding: 0 20px;
-    }
-    .nav-button{
-        display: initial;
-        margin-top: 30px;
-        justify-content: right;
-    }
-
-    .nav-button a:hover{
-        border: #888 solid 5px;
-        background-color: #888;
-        color:#fff;
-    }
-
-    .menu-wrap .menu >div{
-        width: 8vw;
-        height: 30vw;
-
-    }
-    .menu-wrap{
-        visibility: hidden;
-    }
-
-
-    .menu-wrap menu{
-        position: fixed;
-        top: 0;
-        align-items: flex-start;
-        justify-content: flex-start;
-        
-    }
-
-    .nav-button{
-        visibility:visible;
-        position: fixed;
-        top: 0;
-        flex-direction: row;
-        width: 100vw;
-        height: 20wv;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-
-
-
-
-    .newsletter{
-        display: flex;
-        justify-content: right;
-        margin-top: 5px;
-        margin-left: 6px;
-        padding-bottom: 15px;
-    }
-
-    /*body area*/
-    .main-box{
-        display: flex;
-    }
-    .top-news{
-        justify-content: center;
-        overflow: hidden;
-    }
-        
-    .main{
-        display: flex;
-        flex-wrap: wrap;
-        
-        flex: 7;
-        order: 2;
-        justify-content: space-between;
-    }   
-
-    .sidebar1{
-        flex:1;
-        margin-right: 20px;
-        order: 1;
-    }
-    .sidebar2{
-        flex:1;
-        margin-left: 20px;
-        order: 3;
-    }
-
-    
-    .main-box{
-        display: flex;
-        flex-direction: row;
-    }
-    .top-news{
-        margin-top: 20px;
-        border-bottom: 1px solid #fff;
-        flex-basis: fit-content;
-    }
-    .top-news img{
-        width: auto;
-        height: 400px;
-
-    }
+    background-color: black;
 }

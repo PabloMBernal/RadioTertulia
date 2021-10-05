@@ -1,0 +1,115 @@
+@media (min-width: 768px){
+    /*header area*/
+    header{
+        display: flex;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        margin-top: -182px;
+        padding-bottom: 120px ;
+        border-bottom: 1px solid #fff;
+        background-color: #4d0000;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .upperheader{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    #logo{
+        position: fixed;
+        flex:4;        
+        top: 0;
+    }
+    header li{
+        display: inline;
+        flex-direction: initial;
+        padding: 0 20px;
+    }
+    .nav-button{
+        display: initial;
+        justify-content: right;
+        margin-top: 100px;
+    }
+    .nav-button a:hover{
+        border: #888 solid 5px;
+        background-color: #888;
+        color:#fff;
+    }
+    .menu-wrap .menu >div{
+        width: 8vw;
+        height: 30vw;
+
+    }
+    .menu-wrap{
+        visibility: hidden;
+    }
+    .menu-wrap menu{
+        position: fixed;
+        top: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+    }
+    .nav-button{
+        visibility:visible;
+        position: fixed;
+        top: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100vw;
+        height: 20wv;
+    }
+    .newsletter{
+        display: flex;
+        justify-content: right;
+        margin-top: 5px;
+        margin-left: 6px;
+        padding-bottom: 15px;
+    }
+    /*body area*/
+    .main-box{
+        display: flex;
+    }
+    .top-news{
+        justify-content: center;
+        overflow: hidden;
+    }
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex: 7;
+        order: 2;
+    }   
+    .sidebar1{
+        flex:1;
+        order: 1;
+        margin-right: 20px;
+    }
+    .sidebar2{
+        flex:1;
+        order: 3;
+        margin-left: 20px;
+    }
+    .main-box{
+        display: flex;
+        flex-direction: row;
+    }
+    .top-news{
+        flex-basis: fit-content;
+        margin-top: 20px;
+        border-bottom: 1px solid #fff;
+    }
+    .top-news img{
+        width: auto;
+        height: 400px;
+    }
+}
