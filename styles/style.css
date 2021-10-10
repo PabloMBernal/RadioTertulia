@@ -166,6 +166,7 @@ header li{
     height: auto;
 }
 .sidebar1{
+    display: none;
     order: 3;
 }
 .adlist{
@@ -190,7 +191,7 @@ header li{
 .trending{
     padding: 15px 0px;
 }
-.main{
+section{
     order: 1;
 }
 .ads img{
