@@ -29,6 +29,8 @@
     header li{
         display: inline;
         flex-direction: initial;
+        position: sticky;
+        top: 0;
         padding: 0 20px;
     }
     .newsletter{
@@ -41,9 +43,12 @@
     /*body area*/
     .main-box{
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
     .top-news{
-        justify-content: center;
+        justify-content: space-around;
+        flex-grow: 5;
         overflow: hidden;
     }
     section{
@@ -51,20 +56,19 @@
         flex-wrap: wrap;
         justify-content: space-between;
         flex: 6;
-        order: 2;
+        order: 1;
     }
     .sidebar1{
-        display: none;
+        display: flex;
+        flex-direction: row;
+        order: 3;
+        right: 0;
     }
     
     .sidebar2{
         flex:2;
-        order: 3;
+        order: 2;
         margin-left: 20px;
-    }
-    .main-box{
-        display: flex;
-        flex-direction: row;
     }
     .top-news{
         flex-basis: fit-content;
@@ -76,7 +80,7 @@
         height: 400px;
     }
 }
-@media (min-width: 1500px){
+@media (min-width: 1300px){
     /*header area*/
     header{
         display: flex;
@@ -155,6 +159,9 @@
     /*body area*/
     .main-box{
         display: flex;
+        flex-wrap: wrap;
+        margin-left: 15em;
+        margin-right: 15em;
     }
     .top-news{
         justify-content: center;
@@ -169,7 +176,7 @@
     }   
     .sidebar1{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex:1;
         order: 1;
         margin-right: 20px;
@@ -191,5 +198,16 @@
     .top-news img{
         width: auto;
         height: 400px;
+    }
+}
+
+
+@media (min-width: 1400px){
+    .sidebar1{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        order: 1;
+        margin-right: 20px;
     }
 }
