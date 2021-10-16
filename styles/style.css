@@ -29,6 +29,7 @@ header{
 .container{
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 #logo{
     order: 2;
@@ -40,6 +41,8 @@ header{
 #logo h1, #logo h2{
     text-align: center;
 }
+
+
 .menu-wrap{
     order: 1;
 }
@@ -202,6 +205,27 @@ section{
     width: 220px;
     height: auto;
 }
+
+/*main body: subscriptions*/
+.main-box-subs{
+    display: flex;
+    margin-top: 182px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.identifier{
+    margin-right: 10px;
+}
+.field-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+    flex-basis: 35%;   
+}
+
+
+
 /*footer*/
 .wrapfooter{
     overflow: hidden;

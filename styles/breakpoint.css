@@ -79,6 +79,34 @@
         width: auto;
         height: 400px;
     }
+    /*main box: subscription*/
+    .m-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-box-subs{
+        order: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 60% ;
+        justify-content: center;
+    }
+
+    .field{
+        flex-basis: 50%;
+        text-align: center;
+    }
+    .field h4{
+        color: red;
+    }
+    
+    .submit{
+        order: 2;
+    }
+
+
+
 }
 @media (min-width: 1300px){
     /*header area*/
