@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
+    <script src="js/forms.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/breakpoint.css">
-    <script src="functions.js"></script>
     <title>RADIO TERTULIA | SUBSCRIPTIONS</title>
 </head>
 
@@ -62,78 +62,78 @@
     </header>
     <section class="m-box">
         <div class="main-box-subs">
-            <div class="field">
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Name</h3>
-                    <input type="text" placeholder="Esther Piscore">
+                    <input type="text" id="name" placeholder="Esther Piscore">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Name</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">E-mail</h3>
-                    <input type="email" placeholder="piscoreofgarcia@tertulia.net">
+                    <input type="email" id="mail" placeholder="piscoreofgarcia@tertulia.net">
                 </div>
                 <h4 style="visibility: hidden;">Invalid E-mail</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Password</h3>
-                    <input type="text">
+                    <input type="text" id="pass">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Password</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Repeat password</h3>
                     <input type="text">
                 </div>
                 <h4 style="visibility: hidden;">Password does not match</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Age</h3>
-                    <input type="text" placeholder="50">
+                    <input type="text" id="age" placeholder="50">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Age</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Phone number</h3>
-                    <input type="text" placeholder="76485377">
+                    <input type="text" id="phone" placeholder="76485377">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Phone number</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Address</h3>
-                    <input type="text" placeholder="Anastasio Ponce 1497">
+                    <input type="text" id="address" placeholder="Anastasio Ponce 1497">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Address</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">City</h3>
-                    <input type="text" placeholder="Athens">
+                    <input type="text" id="city" placeholder="Athens">
                 </div>
                 <h4 style="visibility: hidden;">Invalid City</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">Zip Code</h3>
-                    <input type="text" placeholder="30601">
+                    <input type="text" id="zip" placeholder="30601">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Zip Code</h4>
-            </div>
-            <div class="field">
+            </form>
+            <form class="field">
                 <div class="field-inner">
                     <h3 class="identifier">DNI</h3>
-                    <input type="text" placeholder="11584589">
+                    <input type="text" id="dni" placeholder="11584589">
                 </div>
                 <h4 style="visibility: hidden;">Invalid Dni</h4>
-            </div>
+            </form>
         </div>
-        <input type="submit" value="submit" class="submit">
+        <button class="submit" id="btn-sbm">submit</button> 
     </section>
     <footer>
         <p class="wrapfooter">

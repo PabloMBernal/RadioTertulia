@@ -223,9 +223,9 @@ section{
     padding: 15px;
     flex-basis: 35%;   
 }
-
-
-
+.submit{
+    border: #fff 30px solid;
+}
 /*footer*/
 .wrapfooter{
     overflow: hidden;
