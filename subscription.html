@@ -1,145 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <script src="js/forms.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/breakpoint.css">
-    <title>RADIO TERTULIA | SUBSCRIPTIONS</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/breakpoint.css">
+        <title>RADIO TERTULIA | SUBSCRIPTIONS</title>
+        <script type="text/javascript" src="js/forms.js" defer></script>
+    </head>
 
-<body>
-
-    <header>
-        <div class="container">
-            <div class="upperheader">
-                <div id="logo">
-                    <h1>Radio Tertulia</h1>
-                    <h2>Nuestra opinion y la tulla</h2>
-                </div>
-                <div class="menu-wrap">
-                    <input type="checkbox" class="toggler">
-                    <div class="hamburger">
-                        <div></div>
+    <body>
+        <header>
+            <div class="container">
+                <div class="upperheader">
+                    <div id="logo">
+                        <h1>Radio Tertulia</h1>
+                        <h2>Nuestra opinion y la tulla</h2>
                     </div>
-                    <div class="menu">
-                        <div>
-                            <nav class="nav-button">
-                                <ul>
-                                    <li>
-                                        <a href="#">Sports</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Music</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Shows</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Local</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Crime</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Economy</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                    <div class="menu-wrap">
+                        <input type="checkbox" class="toggler">
+                        <div class="hamburger">
+                            <div></div>
+                        </div>
+                        <div class="menu">
+                            <div>
+                                <nav class="nav-button">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Music</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Shows</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Local</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Crime</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Economy</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="newsletter">
+                    <input type="email" placeholder="Subscribe to our newsletter">
+                    <input type="submit" name="submit" value="submit">
+                </div>
             </div>
-            <div class="newsletter" style="visibility: hidden;">
-                <input type="email" placeholder="Subscribe to our newsletter">
-                <input type="submit" name="submit" value="submit">
-            </div>
-        </div>
-    </header>
-    <section class="m-box">
-        <div class="main-box-subs">
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Name</h3>
+        </header>
+        <section class="m-box">
+            <h3 id="greeting">Hello </h3>
+            <form class="main-box-subs">
+                <fieldset class="field-inner" id="name-field">
+                    <label for="name" class="identifier">Name</label>
                     <input type="text" id="name" placeholder="Esther Piscore">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Name</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">E-mail</h3>
+                    <span id="name-span" style="visibility: hidden;">Invalid Name</span>
+                </fieldset>
+                <fieldset class="field-inner" id="mail-field">
+                    <label for="mail" class="identifier">E-mail</label>
                     <input type="email" id="mail" placeholder="piscoreofgarcia@tertulia.net">
-                </div>
-                <h4 style="visibility: hidden;">Invalid E-mail</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Password</h3>
-                    <input type="text" id="pass">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Password</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Repeat password</h3>
-                    <input type="text">
-                </div>
-                <h4 style="visibility: hidden;">Password does not match</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Age</h3>
+                    <span id="mail-span" style="visibility: hidden;">Invalid E-mail</span>
+                </fieldset>
+                <fieldset class="field-inner" id="pass-field">
+                    <label for="pass" class="identifier">Password</label>
+                    <input type="password" id="pass">
+                    <span id="pass-span" style="visibility: hidden;">Invalid Password</span>
+                </fieldset>
+                <fieldset class="field-inner" id="rep-pass-field">
+                    <label for="rep-pass" class="identifier">Repeat password</label>
+                    <input type="password" id="rep-pass">
+                    <span id="pass-span-2" style="visibility: hidden;">Password does not match</span>
+                </fieldset>
+                <fieldset class="field-inner" id="age-field">
+                    <label for="age" class="identifier">Age</label>
                     <input type="text" id="age" placeholder="50">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Age</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Phone number</h3>
+                    <span id="age-span" style="visibility: hidden;">Invalid Age</span>
+                </fieldset>
+                <fieldset class="field-inner" id="phone-field">
+                    <label for="phone" class="identifier">Phone number</label>
                     <input type="text" id="phone" placeholder="76485377">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Phone number</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Address</h3>
-                    <input type="text" id="address" placeholder="Anastasio Ponce 1497">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Address</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">City</h3>
+                    <span id="phone-span" style="visibility: hidden;">Invalid Phone number</span>
+                </fieldset>
+                <fieldset class="field-inner" id="add-field">
+                    <label for="address" class="identifier">Address</label>
+                    <input type="text" id="address" placeholder="Anastasio Ponce 1811">
+                    <span id="add-span" style="visibility: hidden;">Invalid Address</span>
+                </fieldset>
+                <fieldset class="field-inner" id="city-field">
+                    <label for="city" class="identifier">City</label>
                     <input type="text" id="city" placeholder="Athens">
-                </div>
-                <h4 style="visibility: hidden;">Invalid City</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">Zip Code</h3>
+                    <span id="city-span" style="visibility: hidden;">Invalid City</span>
+                </fieldset>
+                <fieldset class="field-inner" id="zip-field">
+                    <label for="zip" class="identifier">Zip Code</label>
                     <input type="text" id="zip" placeholder="30601">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Zip Code</h4>
-            </form>
-            <form class="field">
-                <div class="field-inner">
-                    <h3 class="identifier">DNI</h3>
+                    <span id="zip-span" style="visibility: hidden;">Invalid Zip Code</span>
+                </fieldset>
+                <fieldset class="field-inner" id="dni-field">
+                    <label for="dni" class="identifier">DNI</label>
                     <input type="text" id="dni" placeholder="11584589">
-                </div>
-                <h4 style="visibility: hidden;">Invalid Dni</h4>
+                    <span id="dni-span" style="visibility: hidden;">Invalid Dni</span>
+                </fieldset>
             </form>
-        </div>
-        <button class="submit" id="btn-sbm">submit</button> 
-    </section>
-    <footer>
-        <p class="wrapfooter">
-            Radio Tertulia, Copyright &copy; , 2021.
-        </p>
-    </footer>
-</body>
-
+            <button type="submit" class="submit" id="btn-sbm">SUBMIT</button>
+        </section>
+        <footer>
+            <p class="wrapfooter">
+                Radio Tertulia, Copyright &copy; , 2021.
+            </p>
+        </footer>
+    </body>
 </html>
