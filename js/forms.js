@@ -221,7 +221,7 @@ function checkAdd(e){
         formArray[5] = 0;
     }
     else{
-        formArray[5]
+        formArray[5] = str;
     }
 }
 
