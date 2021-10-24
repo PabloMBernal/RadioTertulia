@@ -246,6 +246,45 @@ h3{
     color: #fff;
     font-weight: bolder;    
 }
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #111;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+}
+.modal-dialog {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 5px;
+    background: #4d0000;
+    overflow: auto;
+    cursor: default;
+  }
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+}
+#modal-content{
+    background-color: #4d0000;
+}
+.inner-text-modal{
+    background-color: #4d0000;
+    color: #fff;
+}
+
 
 
 /*footer*/

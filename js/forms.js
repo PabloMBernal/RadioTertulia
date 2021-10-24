@@ -1,3 +1,19 @@
+window.onload = function(){
+    fullName.value = localStorage.getItem("name");
+    mail.value = localStorage.getItem("email");
+    pass.value = localStorage.getItem("pass");
+    age.value = localStorage.getItem("age");
+    phone.value = localStorage.getItem("phone");
+    address.value = localStorage.getItem("address");
+    city.value = localStorage.getItem("city");
+    zip.value = localStorage.getItem("zip");
+    dni.value = localStorage.getItem("dni");
+}
+
+
+var url = 'http://curso-dev-2021.herokuapp.com/newsletter';
+
+
 function isLetter(str){
     return str.length === 1 && str.match(/[a-z]/i) ;
 }
@@ -6,18 +22,67 @@ function isSpace(str) {
     return str.length === 1 && str === ' ';    
 }
 
-function success(elem){
-    alert("Full Name: "+elem[0]+"\nE-mail: "+elem[1]+"\nPassword: "
-    + elem[2]+ "\nAge: "+ elem[3] +"\nPhone Number: "+ elem[4] +
-    "\nAddress: "+ elem[5] +"\nCity: "+ elem[6] +"\nZip Code: "+ 
-    elem[7] +"\nDNI: "+ elem[8]);
+function modalOpen (param){
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
+    localStorage.clear();
+    for (let key in param) {
+        if(! key==0){
+            localStorage.setItem(key, param[key]);
+
+        }
+    }
+    console.log(param);
+    var par = document.createElement('p');
+    par.className = "inner-text-modal";
+    var cont = document.getElementById("modal-content");
+    par.appendChild(document.createTextNode(param));
+    cont.appendChild(par);
 }
+
+function close(e){
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
+}
+
+
+function success(elem){
+    url = url + '?' + 'name=' + elem[0] + '&email=' + elem[1] + '&pass=' + elem[2]
+    + '&age=' + elem[3] + '&phone=' + elem[4] + '&address=' + elem[5] + '&city=' + elem[6]
+    + '&zip=' + elem[7] + '&dni=' + elem[8];
+    console.log(url);
+    fetch(url)
+        .then(function(res) {
+            if (res.status < 200 || res.status >= 300) {
+                throw Error(res.status + ": " + res.statusText);
+            }
+            return res.json();
+        })
+        .then(modalOpen)
+        .catch(modalOpen);
+}
+
+
+function failure(elem){
+    modalOpen(elem);
+    localStorage.clear();
+}
+
+
+
+
+
+
+
+
+
 
 var formArray = [0,0,0,0,0,0,0,0,0];
 
 /* name */ 
 var fullName = document.getElementById('name');
 var nameSpan = document.getElementById('name-span');
+fullName.textContent = localStorage.key = "name";
 fullName.addEventListener('blur', checkName);
 fullName.addEventListener('focus', clrErrorName);
 fullName.addEventListener('keyup', runEvent);
@@ -318,6 +383,10 @@ function clrErrorDni(e){
     dniSpan.style.visibility = "hidden";
 }
 
+var modal = document.getElementById('modal');
+var closeModal = document.getElementById('close-modal');
+closeModal.addEventListener('click', close);
+
 /* Submit Button */
 
 var button = document.getElementById('btn-sbm');
@@ -325,48 +394,54 @@ button.addEventListener('click', showData);
 
 function showData(e){
     e.preventDefault();
+    var check = false;
     for(var i = 0; i < 9; i++){
         if(formArray[i] ==  0){
+            check = true;
             switch(i){
                 case 0:
                     nameSpan.style.visibility = "visible";
-                    formArray[i] = nameSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 1:
                     mailSpan.style.visibility = "visible";
-                    formArray[i] = mailSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 2:
                     passSpan.style.visibility = "visible";
-                    formArray[i] = passSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 3:
                     ageSpan.style.visibility = "visible";
-                    formArray[i] = ageSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 4:
                     phoneSpan.style.visibility = "visible";
-                    formArray[i] = phoneSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 5:
                     addressSpan.style.visibility = "visible";
-                    formArray[i] = addressSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 6:
                     citySpan.style.visibility = "visible";
-                    formArray[i] = citySpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 7:
                     zipSpan.style.visibility = "visible";
-                    formArray[i] = zipSpan.firstChild.textContent;
+                    formArray[i] = 0;
                     break;
                 case 8:
                     dniSpan.style.visibility = "visible";
-                    var test = dniSpan.firstChild.textContent;
-                    formArray[i] = test ;
+                    formArray[i] = 0;
                     break;
             }
         }
     }
-    success(formArray);
+    if(!check){
+        success(formArray);
+    }
+    else{
+        failure(formArray);
+    }
 }
