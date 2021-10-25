@@ -278,9 +278,12 @@ h3{
     background-color: #1a1a1a;
 }
 #modal-content{
+    text-align: center;
     background-color: #4d0000;
 }
 .inner-text-modal{
+    font-weight: bolder;
+    text-align: center;
     background-color: #4d0000;
     color: #fff;
 }
