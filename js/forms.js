@@ -12,10 +12,7 @@ window.onload = function () {
 
 var par = document.createElement('p');
 var cont = document.getElementById("modal-content");
-
-
 var url = 'http://curso-dev-2021.herokuapp.com/newsletter';
-
 
 function isLetter(str) {
     return str.length === 1 && str.match(/[a-z]/i);
@@ -25,33 +22,31 @@ function isSpace(str) {
     return str.length === 1 && str === ' ';
 }
 
-
-
-
-
-
-
-
-
-
-
-
 function modalOpen() {
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 function textSuccess(param){
     var txt = "";
-    console.log("deberia funcionar");
     localStorage.clear();
     for (let key in param) {
         localStorage.setItem(key, param[key]); 
         txt = txt + key + ": " + param[key] + "\n";
     }
-    console.log(param);
-    console.log(txt);
     appendData(txt);
 }
 
@@ -81,13 +76,11 @@ function success(elem) {
     url = url + '?' + 'name=' + elem[0] + '&email=' + elem[1] + '&pass=' + elem[2]
         + '&age=' + elem[3] + '&phone=' + elem[4] + '&address=' + elem[5] + '&city=' + elem[6]
         + '&zip=' + elem[7] + '&dni=' + elem[8];
-    console.log(url);
     modalOpen();
     fetch(url)
         .then(function (res) {
             if (res.status < 200 || res.status >= 300) {
                 throw Error(res.status + ": " + res.statusText);
-                console.log("error");
             }
             return res.json();
         })
