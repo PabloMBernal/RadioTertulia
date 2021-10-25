@@ -15,7 +15,7 @@ var cont = document.getElementById("modal-content");
 var header = document.getElementById("modal-header");
 var succ = document.getElementById("success");
 var fail = document.getElementById("failure");
-var url = 'http://curso-dev-2021.herokuapp.com/newsletter';
+var url = 'https://curso-dev-2021.herokuapp.com/newsletter';
 
 function isLetter(str) {
     return str.length === 1 && str.match(/[a-z]/i);
