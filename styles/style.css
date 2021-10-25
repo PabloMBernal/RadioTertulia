@@ -264,8 +264,8 @@ h3{
 }
 .modal-dialog {
     position: relative;
-    width: 80vw;
-    height: 80vh;
+    width: auto;
+    max-height: 80vh;
     border-radius: 5px;
     background: #4d0000;
     overflow: auto;
@@ -282,10 +282,19 @@ h3{
     background-color: #4d0000;
 }
 .inner-text-modal{
+    display: flex;
+    flex-direction: column;
     font-weight: bolder;
+    font-size: large;
     text-align: center;
     background-color: #4d0000;
     color: #fff;
+}
+.popup-text{
+    text-align: center;
+}
+#close-modal{
+    float: right;
 }
 
 

@@ -12,6 +12,9 @@ window.onload = function () {
 
 var par = document.createElement('p');
 var cont = document.getElementById("modal-content");
+var header = document.getElementById("modal-header");
+var succ = document.getElementById("success");
+var fail = document.getElementById("failure");
 var url = 'http://curso-dev-2021.herokuapp.com/newsletter';
 
 function isLetter(str) {
@@ -25,6 +28,14 @@ function isSpace(str) {
 function modalOpen() {
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
+}
+
+function close(e) {
+    fail.style.display = "none";
+    succ.style.display = "none";
+    cont.removeChild(par);
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
 }
 
 
@@ -42,15 +53,17 @@ function modalOpen() {
 
 function textSuccess(param){
     var txt = "";
+    succ.style.display = "inline";
     localStorage.clear();
     for (let key in param) {
         localStorage.setItem(key, param[key]); 
-        txt = txt + key + ": " + param[key] + "\n";
+        txt =key + ": " + param[key];
+        appendData(txt);
     }
-    appendData(txt);
 }
 
 function textFailure(param){
+    fail.style.display = "inline";
     localStorage.clear()
     appendData(param);
 }
@@ -65,12 +78,6 @@ function appendData(param){
 
 
 
-
-function close(e) {
-    cont.removeChild(par);
-    modal.style.visibility = "hidden";
-    modal.style.opacity = "0";
-}
 
 function success(elem) {
     url = url + '?' + 'name=' + elem[0] + '&email=' + elem[1] + '&pass=' + elem[2]
@@ -133,8 +140,7 @@ function failure(elem) {
         }
     }
     modalOpen();
-    appendData(scrTxt);
-    localStorage.clear();
+    textFailure(scrTxt);
 }
 
 
